@@ -10,5 +10,7 @@ main = someFunc
 safeHead :: [a] -> Maybe a
 safeHead l = case l of
     [] -> Nothing
-    _  -> Just . head l
+    _  -> Just . head $ l
 
+unsafeHead :: [a] -> a
+unsafeHead = head
